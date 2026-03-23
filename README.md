@@ -27,7 +27,7 @@ Most people don't realize they've overspent until the end of the month. ExpenseI
 
 | Technology    | Purpose                            |
 | ------------- | ---------------------------------- |
-| React 18      | UI components and state management |
+| React JS      | UI components and state management |
 | Vite          | Fast development build tool        |
 | Tailwind CSS  | Utility-first styling              |
 | Recharts      | Pie and Bar chart visualizations   |
