@@ -21,7 +21,6 @@ function App() {
       ? expenses
       : expenses.filter((expense) => expense.category === selectedCategory);
 
-  // Job 1 — Load once on first open
   useEffect(() => {
     const saved = localStorage.getItem("expenses");
     if (saved) setExpenses(JSON.parse(saved));
@@ -30,14 +29,12 @@ function App() {
     if (savedBudget) setMonthlyBudget(JSON.parse(savedBudget));
   }, []);
 
-  // Job 2 — Save every time expenses changes
   useEffect(() => {
     if (expenses.length > 0) {
       localStorage.setItem("expenses", JSON.stringify(expenses));
     }
   }, [expenses]);
 
-  // Job 3 — Save budget whenever it changes
   useEffect(() => {
     localStorage.setItem("budget", JSON.stringify(monthlyBudget));
   }, [monthlyBudget]);
